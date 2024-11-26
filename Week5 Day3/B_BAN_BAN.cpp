@@ -8,18 +8,12 @@ int main()
         int n;
         cin>>n;
         vector<pair<int,int>>vec;
-        int count=0;
-        for(int i=2; i<=n; i+=2){
-            count++;
-            vec.push_back({3*i, (3*i)-5});
-        }
-        if(n%2!=0){
-            count++;
-            vec.push_back({3*n, (3*n)-2});
-        }
+        int count=n/2+n%2;
         cout<<count<<endl;
-        for(auto i: vec){
-            cout<<i.second<<" "<<i.first<<endl;
+        int i=1, r=3*n;
+        while(i<r){
+            cout<<i<<" "<<r<<endl;
+            i+=3, r-=3;
         }
     }
     return 0;
