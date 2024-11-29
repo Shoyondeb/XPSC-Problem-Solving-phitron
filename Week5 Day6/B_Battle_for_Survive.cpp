@@ -21,9 +21,9 @@ int main()
         ll sum=0;
         sort(vec.begin(), vec.end());
         for(int i=0; i<vec.size(); i++){
-            sum+=(last_1-vec[i]);
+            last_1-=vec[i];
         }
-        cout<<last-sum<<endl;
+        cout<<last-last_1<<endl;
     }
     return 0;
 }
